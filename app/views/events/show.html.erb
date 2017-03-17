@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <div id='notice'><%= flash[:notice] %></div>
+ <% end %>
+<p>
+<strong>Name</strong>
+<%= @event.name %>
+</p>
+<p>
+<strong>Age</strong>
+<%= @event.age %>
+</p>
+
+<%= link_to 'Back', events_path(@event) %>

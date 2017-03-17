@@ -1,0 +1,25 @@
+<%= form_for @event do |k| %>
+ <% if @event.errors.any? %>
+  <div id='error explanation?'>
+  <h2><%= pluralize(@event.errors.count,'error')%> Prohibited event from being saved: </h2>
+  <ul>
+  <% @event.full_msg.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+  </div>
+  <% end %>
+  <p>
+  <%= k.label :name %>
+  <%= k.text_field :name %>
+  </p>
+
+  <p>
+  <%= k.label :age %>
+  <%= k.text_field :age %>
+  </p>
+
+  <p>
+  <%= k.submit :submit %>
+  </p>
+  <% end %>

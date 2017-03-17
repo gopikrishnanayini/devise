@@ -1,0 +1,15 @@
+<h1>Listing Location</h1>
+<table>
+	<tr>
+		<th>Address</th>
+	</tr>
+	<tr>
+		<td><%= @locations.address %></td>
+		<td><%= link_to 'show', event_location_path(@event, @locations) %></td>
+		<td><%= link_to 'edit', edit_event_location_path(@event, @locations) %></td>
+		<td><%= link_to 'events', event_path(@event) %></td>
+		<td><%= link_to 'destroy', event_location_path(@event, @locations),
+			method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	
+</table>
